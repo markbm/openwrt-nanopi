@@ -15,7 +15,7 @@
 # Source code repository: https://github.com/openwrt/openwrt / Branch: 21.02 Tag: v21.02.1
 #========================================================================================================================
 
-name: Build Openwrt using official release v21.02.1 source
+name: Build Openwrt nanopi r2s
 
 on:
   repository_dispatch:
