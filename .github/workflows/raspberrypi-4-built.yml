@@ -9,8 +9,8 @@
 #
 
 #========================================================================================================================
-# https://github.com/markbm/nanopi-r2s-openwrt
-# Description: Automatically Build OpenWrt for nanopi r2s
+# https://github.com/markbm/compile-openwrt
+# Description: Automatically Build OpenWrt for raspberry pi 4
 # Cron: min (0 - 59) / hour (0 - 23) / day of month (1 - 31) / month (1 - 12) / day of week (0 - 6)(Sunday - Saturday)
 # Source code repository: https://github.com/openwrt/openwrt / Branch: 21.02 Tag: v21.02.1
 #========================================================================================================================
@@ -26,10 +26,10 @@ env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: openwrt-21.02
   REPO_TAG: v21.02.1
-  FEEDS_CONF: router-config/openwrt-21.02/feeds.conf.default
-  CONFIG_FILE: router-config/openwrt-21.02/.config
-  DIY_P1_SH: router-config/openwrt-21.02/diy-part1.sh
-  DIY_P2_SH: router-config/openwrt-21.02/diy-part2.sh
+  FEEDS_CONF: router-config/raspberrypi-4/feeds.conf.default
+  CONFIG_FILE: router-config/raspberrypi-4/.config
+  DIY_P1_SH: router-config/raspberrypi-4/diy-part1.sh
+  DIY_P2_SH: router-config/raspberrypi-4/diy-part2.sh
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: false
   UPLOAD_RELEASE: true
