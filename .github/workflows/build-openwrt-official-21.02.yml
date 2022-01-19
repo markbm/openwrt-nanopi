@@ -38,7 +38,8 @@ env:
 jobs:
   build:
     runs-on: ubuntu-20.04
-
+    if: github.event.repository.owner.id == github.event.sender.id
+    
     steps:
     - name: Checkout
       uses: actions/checkout@main
@@ -61,8 +62,8 @@ jobs:
       run: |
         df -hT $PWD
         git clone $REPO_URL
-		cd /workdir/openwrt
-		git checkout $REPO_TAG
+	cd /workdir/openwrt
+	git checkout $REPO_TAG
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
 
     - name: Load custom feeds
