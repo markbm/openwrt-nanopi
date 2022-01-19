@@ -1,1 +1,1 @@
-# openwrt-nanopi
+# openwrt-SBC
