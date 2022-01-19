@@ -1,9 +1,9 @@
 #!/bin/bash
 #========================================================================================================================
-# https://github.com/ophub/amlogic-s9xxx-openwrt
-# Description: Automatically Build OpenWrt for Amlogic s9xxx tv box
+# https://github.com/markbm/openwrt-nanopi
+# Description: Automatically Build OpenWrt for nanopi r2s
 # Function: Diy script (Before Update feeds, Modify the default IP, hostname, theme, add/remove software packages, etc.)
-# Source code repository: https://github.com/openwrt/openwrt / Branch: 21.02
+# Source code repository: https://github.com/openwrt/openwrt / Branch: 21.02 Tag: v21.02.1
 #========================================================================================================================
 
 # Uncomment a feed source
