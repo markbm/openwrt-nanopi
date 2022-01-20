@@ -15,7 +15,7 @@
 # Source code repository: https://github.com/openwrt/openwrt / Branch: 21.02 Tag: v21.02.1
 #========================================================================================================================
 
-name: Build Openwrt Raspberry Pi 4B
+name: Build Openwrt Raspberry Pi 4
 
 on:
   repository_dispatch:
