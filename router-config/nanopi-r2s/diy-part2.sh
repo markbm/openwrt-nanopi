@@ -31,6 +31,7 @@ echo "DISTRIB_SOURCECODE='openwrt'" >>package/base-files/files/etc/openwrt_relea
 
 # ------------------------------- Other started -------------------------------
 #
-
+mkdir -p files/etc/config/
+cp $GITHUB_WORKSPACE/scripts/passwall-default files/etc/config/passwall
 #
 # ------------------------------- Other ends -------------------------------
