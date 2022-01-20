@@ -8,9 +8,6 @@
 
 # ------------------------------- Main source started -------------------------------
 #
-# Modify default theme（FROM uci-theme-bootstrap CHANGE TO luci-theme-material）
-# sed -i 's/luci-theme-bootstrap/luci-theme-material/g' feeds/luci/collections/luci/Makefile
-
 # Add the default password for the 'root' user（Change the empty password to 'password'）
 sed -i 's/root::0:0:99999:7:::/root:$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF.:0:0:99999:7:::/g' package/base-files/files/etc/shadow
 
@@ -29,8 +26,10 @@ echo "DISTRIB_SOURCECODE='openwrt'" >>package/base-files/files/etc/openwrt_relea
 #
 # ------------------------------- Main source ends -------------------------------
 
-# ------------------------------- Other started -------------------------------
+# ------------------------------- Other config started -------------------------------
 #
-
+echo "dtparam=i2c_arm=on,audio=on" >> target/linux/bcm27xx/image/config.txt
+mkdir -p files/etc/uci-defaults/
+cp $GITHUB_WORKSPACE/scripts/init-settings-rpi4.sh files/etc/uci-defaults/99-init-settings
 #
-# ------------------------------- Other ends -------------------------------
+# ------------------------------- Other config ends -------------------------------
