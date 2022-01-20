@@ -31,5 +31,7 @@ echo "DISTRIB_SOURCECODE='openwrt'" >>package/base-files/files/etc/openwrt_relea
 echo "dtparam=i2c_arm=on,audio=on" >> target/linux/bcm27xx/image/config.txt
 mkdir -p files/etc/uci-defaults/
 cp $GITHUB_WORKSPACE/scripts/init-settings-rpi4.sh files/etc/uci-defaults/99-init-settings
+mkdir -p files/etc/config/
+cp $GITHUB_WORKSPACE/scripts/passwall-default files/etc/config/passwall
 #
 # ------------------------------- Other config ends -------------------------------
