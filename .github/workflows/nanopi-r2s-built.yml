@@ -140,11 +140,15 @@ jobs:
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
         touch release.txt
-        echo "This is OpenWrt firmware for nanopi r2s" >> release.txt
-        echo "****Firmware information****" >> release.txt
-        echo "Default IP: 192.168.1.1" >> release.txt
-        echo "Default username: root" >> release.txt
-        echo "Default password: password" >> release.txt
+        echo "***This is OpenWrt firmware for nanopi r2s***" >> release.txt
+        echo "Firmware information" >> release.txt
+        echo "- Default IP: 192.168.1.1" >> release.txt
+        echo "- Default username: root" >> release.txt
+        echo "- Default password: password" >> release.txt
+        echo "***Included***" >> release.txt
+        echo "- Passwall" >> release.txt
+        echo "- Openclash" >> release.txt
+        echo "- SSR+" >> release.txt
         echo "::set-output name=status::success"
 
     - name: Upload firmware to release
