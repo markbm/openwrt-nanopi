@@ -8,6 +8,7 @@ uci set network.usb0=interface
 uci set network.usb0.proto='dhcp'
 uci set network.usb0.device='usb0'
 uci set network.usb0.auto='0'
+uci set firewall.@zone[1].network='wan usb0'
 uci commit
 
 exit 0
