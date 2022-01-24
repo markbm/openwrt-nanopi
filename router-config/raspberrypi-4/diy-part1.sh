@@ -23,5 +23,8 @@ for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
 done
 
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git" >> "feeds.conf.default"
-
 svn checkout "https://github.com/vernesong/OpenClash.git/trunk/luci-app-openclash" "package/luci-app-openclash"
+mkdir -p package/luci-app-cpu-status
+svn checkout "https://github.com/gSpotx2f/luci-app-cpu-status.git" "package/luci-app-cpu-status"
+mkdir -p package/luci-app-temp-status
+svn checkout "https://github.com/gSpotx2f/luci-app-temp-status.git" "package/luci-app-temp-status"
