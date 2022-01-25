@@ -11,4 +11,7 @@ uci set network.usb0.auto='0'
 uci set firewall.@zone[1].network='wan usb0'
 uci commit
 
+sed -i '/helloworld/d' /etc/opkg/distfeeds.conf
+sed -i '/passwall/d' /etc/opkg/distfeeds.conf
+
 exit 0
