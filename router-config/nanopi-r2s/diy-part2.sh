@@ -35,6 +35,6 @@ mkdir -p files/etc/uci-defaults/
 cp $GITHUB_WORKSPACE/scripts/init-settings-nanopi_r2s.sh files/etc/uci-defaults/99-init-settings
 mkdir -p files/etc/config/
 cp $GITHUB_WORKSPACE/scripts/passwall-default files/etc/config/passwall
-cp $GITHUB_WORKSPACE/scripts/firewall-nanopi-r2s /files/etc/firewall.user
+cp $GITHUB_WORKSPACE/scripts/firewall-nanopi-r2s files/etc/firewall.user
 #
 # ------------------------------- Other ends -------------------------------
