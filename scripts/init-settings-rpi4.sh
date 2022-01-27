@@ -10,7 +10,11 @@ uci set dhcp.wan.ignore='1'
 uci set network.wan=interface
 uci set network.wan.device='eth1'
 uci set network.wan.proto='dhcp'
-uci set firewall.@zone[1].network='wan'
+uci set network.usb0=interface
+uci set network.usb0.proto='dhcp'
+uci set network.usb0.device='usb0'
+uci set network.usb0.auto='0'
+uci set firewall.@zone[1].network='wan usb0'
 uci commit
 
 sed -i '/helloworld/d' /etc/opkg/distfeeds.conf
