@@ -9,7 +9,7 @@
 #
 
 #========================================================================================================================
-# https://github.com/markbm/nanopi-r2s-openwrt
+# https://github.com/markbm/compile-openwrt
 # Description: Automatically Build OpenWrt for nanopi r2s
 # Cron: min (0 - 59) / hour (0 - 23) / day of month (1 - 31) / month (1 - 12) / day of week (0 - 6)(Sunday - Saturday)
 # Source code repository: https://github.com/openwrt/openwrt / Branch: 21.02 Tag: v21.02.1
@@ -138,7 +138,7 @@ jobs:
       run: |
         echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
         touch release.txt
-        echo "***This is OpenWrt firmware for nanopi r2s***" >> release.txt
+        echo "***This is OpenWrt SNAPSHOT firmware for nanopi r2s***" >> release.txt
         echo "Firmware information" >> release.txt
         echo "- Default IP: 192.168.1.1" >> release.txt
         echo "- Default username: root" >> release.txt
