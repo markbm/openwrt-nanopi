@@ -136,7 +136,7 @@ jobs:
       id: tag
       if: env.UPLOAD_RELEASE == 'true' && !cancelled()
       run: |
-        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M")"
+        echo "::set-output name=release_tag::$(date +"%Y.%m.%d-%H%M-SNAPSHOT")"
         touch release.txt
         echo "***This is OpenWrt SNAPSHOT firmware for nanopi r2s***" >> release.txt
         echo "Firmware information" >> release.txt
