@@ -26,6 +26,6 @@ echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git" >> "fe
 echo "src-git passwall_luci https://github.com/xiaorouji/openwrt-passwall.git;luci" >> "feeds.conf.default"
 svn checkout "https://github.com/vernesong/OpenClash.git/trunk/luci-app-openclash" "package/luci-app-openclash"
 mkdir -p package/luci-app-cpu-status
-svn checkout "https://github.com/gSpotx2f/luci-app-cpu-status.git" "package/luci-app-cpu-status"
+svn checkout "https://github.com/gSpotx2f/luci-app-cpu-status/trunk" "package/luci-app-cpu-status"
 mkdir -p package/luci-app-temp-status
-svn checkout "https://github.com/gSpotx2f/luci-app-temp-status.git" "package/luci-app-temp-status"
+svn checkout "https://github.com/gSpotx2f/luci-app-temp-status/trunk" "package/luci-app-temp-status"
