@@ -1,20 +1,22 @@
 
 config global
 	option socks_enabled '0'
-	option dns_mode 'pdnsd'
 	option dns_forward '1.1.1.1'
 	option localhost_tcp_proxy_mode 'default'
 	option localhost_udp_proxy_mode 'default'
-	option close_log_tcp '0'
-	option close_log_udp '0'
-	option loglevel 'error'
 	option trojan_loglevel '4'
 	option udp_node 'tcp'
-	option dns_cache '1'
 	option tcp_proxy_mode 'global'
 	option udp_proxy_mode 'global'
+	option dns_mode 'xray'
+	option v2ray_dns_mode 'doh'
+	option remote_dns_doh 'https://1.1.1.1/dns-query'
+	option dns_cache '1'
+	option tcp_node 'aa05528fc1e8491887a04f9db20ec667'
+	option close_log_tcp '0'
+	option close_log_udp '0'
+	option loglevel 'info'
 	option enabled '0'
-	option tcp_node 'nil'
 
 config global_haproxy
 	option balancing_enable '0'
@@ -32,7 +34,11 @@ config global_forwarding
 	option ipv6_tproxy '0'
 	option udp_no_redir_ports 'disable'
 	option tcp_redir_ports '1:65535'
-	option tcp_proxy_way 'tproxy'
+	option tcp_proxy_drop_ports 'disable'
+	option udp_proxy_drop_ports 'disable'
+	option sniffing '1'
+	option route_only '0'
+	option tcp_proxy_way 'redirect'
 
 config global_other
 	option status 'big_icon show_check_port show_ip111'
@@ -135,4 +141,3 @@ config shunt_rules 'China'
 	option remarks 'China'
 	option domain_list 'geosite:cn'
 	option ip_list 'geoip:cn'
-
