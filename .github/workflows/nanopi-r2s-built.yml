@@ -25,7 +25,7 @@ on:
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
   REPO_BRANCH: openwrt-22.03
-  REPO_TAG: v22.03.1
+  REPO_TAG: v22.03.2
   FEEDS_CONF: router-config/nanopi-r2s/feeds.conf.default
   CONFIG_FILE: router-config/nanopi-r2s/.config
   DIY_P1_SH: router-config/nanopi-r2s/diy-part1.sh
