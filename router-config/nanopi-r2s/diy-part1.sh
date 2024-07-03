@@ -16,15 +16,9 @@
 # other
 # rm -rf package/lean/{samba4,luci-app-samba4,luci-app-ttyd}
 
-echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
-mkdir -p package/helloworld
-for i in "dns2socks" "microsocks" "ipt2socks" "pdnsd-alt" "redsocks2"; do \
-  svn checkout "https://github.com/immortalwrt/packages/trunk/net/$i" "package/helloworld/$i"; \
-done
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git" >> "feeds.conf.default"
 echo "src-git passwall-packages https://github.com/xiaorouji/openwrt-passwall-packages.git" >> "feeds.conf.default"
 svn checkout "https://github.com/vernesong/OpenClash.git/trunk/luci-app-openclash" "package/luci-app-openclash"
-mkdir -p package/luci-app-cpu-status
-svn checkout "https://github.com/gSpotx2f/luci-app-cpu-status/trunk" "package/luci-app-cpu-status"
-mkdir -p package/luci-app-temp-status
-svn checkout "https://github.com/gSpotx2f/luci-app-temp-status/trunk" "package/luci-app-temp-status"
+echo "src-git cpu-status https://github.com/gSpotx2f/luci-app-cpu-status.git" >> "feeds.conf.default"
+echo "src-git app-temp https://github.com/gSpotx2f/luci-app-temp-status.git" >> "feeds.conf.default"
+
