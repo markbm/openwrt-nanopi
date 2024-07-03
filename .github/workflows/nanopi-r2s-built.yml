@@ -24,8 +24,8 @@ on:
 
 env:
   REPO_URL: https://github.com/openwrt/openwrt.git
-  REPO_BRANCH: openwrt-22.03
-  REPO_TAG: v22.03.4
+  REPO_BRANCH: openwrt-23.05
+  REPO_TAG: v23.05.3
   FEEDS_CONF: router-config/nanopi-r2s/feeds.conf.default
   CONFIG_FILE: router-config/nanopi-r2s/.config
   DIY_P1_SH: router-config/nanopi-r2s/diy-part1.sh
@@ -33,7 +33,7 @@ env:
   UPLOAD_BIN_DIR: false
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  TZ: Asia/Shanghai
+  TZ: Asia/Kuching
 
 jobs:
   build:
