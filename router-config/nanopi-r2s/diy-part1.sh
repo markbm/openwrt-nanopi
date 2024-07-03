@@ -18,7 +18,9 @@
 
 echo "src-git passwall https://github.com/xiaorouji/openwrt-passwall.git" >> "feeds.conf.default"
 echo "src-git passwall-packages https://github.com/xiaorouji/openwrt-passwall-packages.git" >> "feeds.conf.default"
-git clone https://github.com/vernesong/OpenClash.git/luci-app-openclash package/luci-app-openclash
-git clone https://github.com/gSpotx2f/luci-app-cpu-status.git package/luci-app-cpu-status
-git clone https://github.com/gSpotx2f/luci-app-temp-status.git package/luci-app-temp-status
+cd package
+# git clone https://github.com/vernesong/OpenClash.git/luci-app-openclash package/luci-app-openclash
+git clone https://github.com/gSpotx2f/luci-app-cpu-status.git
+git clone https://github.com/gSpotx2f/luci-app-temp-status.git
+cd ..
 
